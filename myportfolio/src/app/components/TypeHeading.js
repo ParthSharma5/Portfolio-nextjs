@@ -11,6 +11,7 @@ export default function TypeHeading() {
     "A Software Developer",
     "A React Native Developer",
     "A React Developer",
+    "A Nextjs Developer",
   ];
 
   // Loop through each title after delay
