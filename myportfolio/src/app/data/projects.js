@@ -24,13 +24,6 @@ const projects = [
     languagesUsed: ["React Native"],
   },
   {
-    title: "Netflix Clone",
-    description: "description",
-    status: "Upcoming",
-    link: "https://localhostwgatsappClone",
-    languagesUsed: ["Javascript", "Html", "css"],
-  },
-  {
     title: "Spotify Clone",
     description: "description",
     status: "Upcoming",
@@ -53,14 +46,13 @@ const projects = [
     link: "https://localhostwgatsappClone",
     languagesUsed: ["Javascript", "Html", "css"],
   },
-    {
+  {
     title: "ONDC Clone",
     description: "it's for a Online digital marketting",
     status: "Upcoming",
     link: "https://localhostwgatsappClone",
     languagesUsed: ["React", "javascript", "Bootstrap", "css"],
   },
-  
 ];
 
 export default projects;
