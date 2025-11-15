@@ -16,20 +16,14 @@ const projects = [
     languagesUsed: ["Javascript", "Html", "css"],
   },
   {
-    title: "whatsapp Clone",
+    title: "Whatsapp Clone",
     description:
       "This project is a fully functional WhatsApp clone developed using React Native, designed to replicate the core features of the popular messaging app.",
     status: "Live",
     link: "https://qr.expo.dev/eas-update?slug=exp&projectId=ac5d808e-9ef5-423c-b978-0e0c9d08650c&groupId=ad604f36-7bec-4010-b0d7-b5e1cb472945&host=u.expo.dev",
     languagesUsed: ["React Native"],
   },
-  {
-    title: "Spotify Clone",
-    description: "description",
-    status: "Upcoming",
-    link: "https://localhostwgatsappClone",
-    languagesUsed: ["Javascript", "Html", "css"],
-  },
+
 
   {
     title: "Netflix Clone",
@@ -39,20 +33,14 @@ const projects = [
     link: "https://localhostwgatsappClone",
     languagesUsed: ["Javascript", "Html", "css"],
   },
-  {
-    title: "Spotify Clone",
-    description: "description",
-    status: "Upcoming",
-    link: "https://localhostwgatsappClone",
-    languagesUsed: ["Javascript", "Html", "css"],
-  },
-  {
-    title: "ONDC Clone",
-    description: "it's for a Online digital marketting",
-    status: "Upcoming",
-    link: "https://localhostwgatsappClone",
-    languagesUsed: ["React", "javascript", "Bootstrap", "css"],
-  },
+
+  // {
+  //   title: "ONDC Clone",
+  //   description: "it's for a Online digital marketting",
+  //   status: "Upcoming",
+  //   link: "https://localhostwgatsappClone",
+  //   languagesUsed: ["React", "javascript", "Bootstrap", "css"],
+  // },
 ];
 
 export default projects;

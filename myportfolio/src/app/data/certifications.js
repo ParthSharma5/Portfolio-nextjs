@@ -32,14 +32,14 @@ const certifications = [
     link: "https://drive.google.com/file/d/1TTXgZmiN-ROGMK2ZehfF0vF_44L_WCPC/view?usp=sharing",
     status: "Live",
   },
-    {
-    id: 1,
-    title: "Frontend Developer",
-    issuer: "Coursera",
-    year: "2024",
-    link: "",
-    status: "Upcoming",
-  },
+  //   {
+  //   id: 1,
+  //   title: "Frontend Developer",
+  //   issuer: "Coursera",
+  //   year: "2024",
+  //   link: "",
+  //   status: "Upcoming",
+  // },
   {
     id:6,
     title:'React Developer',
