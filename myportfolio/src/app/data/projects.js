@@ -10,7 +10,8 @@ const projects = [
 
   {
     title: "Tindog website",
-    description: "It's for a dog website",
+    description:
+      "TinDog is a playful dating app for dogs helping your pup meet new furry friends nearby. With simple usability, flexible subscription plans, and a money-back guarantee, it’s the perfect way for your dog to find their true love.",
     status: "Live",
     link: "https://tindog-website-six-navy.vercel.app/",
     languagesUsed: ["Javascript", "Html", "css"],
@@ -23,7 +24,6 @@ const projects = [
     link: "https://qr.expo.dev/eas-update?slug=exp&projectId=ac5d808e-9ef5-423c-b978-0e0c9d08650c&groupId=ad604f36-7bec-4010-b0d7-b5e1cb472945&host=u.expo.dev",
     languagesUsed: ["React Native"],
   },
-
 
   {
     title: "Netflix Clone",
