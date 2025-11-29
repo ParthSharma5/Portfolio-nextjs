@@ -1,7 +1,7 @@
 
 const certifications = [
   {
-    id: 2,
+    id: 1,
     title: "JavaScript",
     issuer: "Udemy",
     year: "2025",
