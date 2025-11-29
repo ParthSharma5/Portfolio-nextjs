@@ -1,19 +1,17 @@
+"use client";
 
-
-'use client';
-
-import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  FaEnvelope, 
-  FaGithub, 
-  FaLinkedin, 
-  FaArrowUp, 
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import {
+  FaEnvelope,
+  FaGithub,
+  FaLinkedin,
+  FaArrowUp,
   FaPhone,
   FaMapMarkerAlt,
   FaPaperPlane,
-  FaCheckCircle 
-} from 'react-icons/fa';
+  FaCheckCircle,
+} from "react-icons/fa";
 
 export default function ContactSection() {
   const [submitted, setSubmitted] = useState(false);
@@ -25,42 +23,42 @@ export default function ContactSection() {
   };
 
   const socialLinks = [
-    { 
-      icon: <FaEnvelope />, 
-      href: 'mailto:parth.scse@gmail.com', 
-      label: 'Email',
-      color: 'hover:text-red-400'
+    {
+      icon: <FaEnvelope />,
+      href: "mailto:parth.scse@gmail.com",
+      label: "Email",
+      color: "hover:text-red-400",
     },
-    { 
-      icon: <FaGithub />, 
-      href: 'https://github.com/ParthSharma5', 
-      label: 'GitHub',
-      color: 'hover:text-purple-400'
+    {
+      icon: <FaGithub />,
+      href: "https://github.com/ParthSharma5",
+      label: "GitHub",
+      color: "hover:text-purple-400",
     },
-    { 
-      icon: <FaLinkedin />, 
-      href: 'https://www.linkedin.com/in/parth-sharma-aa5274247/', 
-      label: 'LinkedIn',
-      color: 'hover:text-blue-400'
+    {
+      icon: <FaLinkedin />,
+      href: "https://www.linkedin.com/in/parth-sharma-aa5274247/",
+      label: "LinkedIn",
+      color: "hover:text-blue-400",
     },
   ];
 
   const contactInfo = [
     {
       icon: <FaEnvelope className="text-xl" />,
-      text: 'parth.scse@gmail.com',
-      href: 'mailto:parth.scse@gmail.com'
+      text: "parth.scse@gmail.com",
+      href: "mailto:parth.scse@gmail.com",
     },
     {
       icon: <FaPhone className="text-xl" />,
-      text: '+91 8979880468', // Replace with your actual number
-      href: 'tel:+918979880468'
+      text: "+91 8979880468", // Replace with your actual number
+      href: "tel:+918979880468",
     },
     {
       icon: <FaMapMarkerAlt className="text-xl" />,
-      text: 'Gurugram, India',
-      href: '#'
-    }
+      text: "Gurugram, India",
+      href: "#",
+    },
   ];
 
   const handleSubmit = async (e) => {
@@ -68,33 +66,35 @@ export default function ContactSection() {
     setIsLoading(true);
 
     const formData = new FormData(e.target);
-    
+
     try {
       const response = await fetch("https://formspree.io/f/xwpnpejb", {
         method: "POST",
         body: formData,
         headers: {
-          'Accept': 'application/json'
-        }
+          Accept: "application/json",
+        },
       });
 
       if (response.ok) {
         setSubmitted(true);
         e.target.reset(); // Clear form
       } else {
-        alert('Form submission failed. Please try again.');
+        alert("Form submission failed. Please try again.");
       }
     } catch (error) {
-      console.error('Error submitting form:', error);
-      alert('An error occurred. Please try again later.');
+      console.error("Error submitting form:", error);
+      alert("An error occurred. Please try again later.");
     } finally {
       setIsLoading(false);
     }
   };
 
   return (
-    <section id="contact" className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 text-white overflow-hidden">
-      
+    <section
+      id="contact"
+      className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 text-white overflow-hidden"
+    >
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl"></div>
@@ -102,7 +102,6 @@ export default function ContactSection() {
       </div>
 
       <div className="max-w-7xl mx-auto relative z-10">
-        
         {/* Header Section */}
         <motion.div
           className="text-center mb-12 sm:mb-16 lg:mb-20"
@@ -128,13 +127,12 @@ export default function ContactSection() {
             transition={{ duration: 0.8, delay: 0.3 }}
             viewport={{ once: true }}
           >
-            Have a project in mind or want to collaborate? I'd love to hear from you. 
-            Let's create something amazing together!
+            Have a project in mind or want to collaborate? I&apos;d love to hear
+            from you. Let&apos;s create something amazing together!
           </motion.p>
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 max-w-6xl mx-auto">
-          
           {/* Contact Information */}
           <motion.div
             className="lg:col-span-1"
@@ -146,9 +144,9 @@ export default function ContactSection() {
             <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-gray-700 shadow-xl">
               <h3 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
                 <div className="w-2 h-8 bg-cyan-400 rounded-full"></div>
-                Let's Connect
+                Let&apos;s Connect
               </h3>
-              
+
               <div className="space-y-4 mb-8">
                 {contactInfo.map((info, index) => (
                   <motion.a
@@ -169,7 +167,9 @@ export default function ContactSection() {
 
               {/* Social Links */}
               <div>
-                <h4 className="text-lg font-semibold text-white mb-4">Follow Me</h4>
+                <h4 className="text-lg font-semibold text-white mb-4">
+                  Follow Me
+                </h4>
                 <div className="flex gap-4">
                   {socialLinks.map((link, idx) => (
                     <motion.a
@@ -216,9 +216,12 @@ export default function ContactSection() {
                   >
                     <FaCheckCircle className="text-green-400 text-4xl" />
                   </motion.div>
-                  <h3 className="text-2xl font-bold text-green-400 mb-4">Message Sent!</h3>
+                  <h3 className="text-2xl font-bold text-green-400 mb-4">
+                    Message Sent!
+                  </h3>
                   <p className="text-gray-300 text-lg mb-6">
-                    Thank you for reaching out! I've received your message and will get back to you within 24 hours.
+                    Thank you for reaching out! I&apos;ve received your message
+                    and will get back to you within 24 hours.
                   </p>
                   <motion.button
                     onClick={() => setSubmitted(false)}
