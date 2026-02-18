@@ -1,69 +1,3 @@
-
-// "use client";
-
-// import Link from "next/link";
-// import { useState } from "react";
-
-// export default function Navbar() {
-//   const [isOpen, setIsOpen] = useState(false);
-
-//   return (
-//     <nav className="bg-gray-900 shadow-md fixed w-full z-50">
-//       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-//         <div className="flex justify-between h-16 items-center">
-//           {/* Logo */}
-//           <div className="text-xl font-bold text-white">Parth</div>
-
-//           {/* Desktop Nav */}
-//           <div className="hidden md:flex space-x-8">
-//             <a href="#projects" className="text-gray-300 hover:text-indigo-400 transition">
-//               Projects
-//             </a>
-//             <a href="#certifications" className="text-gray-300 hover:text-indigo-400 transition">
-//               Certifications
-//             </a>
-//             <a href="#contact" className="text-gray-300 hover:text-indigo-400 transition">
-//               Contact
-//             </a>
-//           </div>
-
-//           {/* Mobile Hamburger */}
-//           <div className="md:hidden">
-//             <button
-//               onClick={() => setIsOpen(!isOpen)}
-//               className="text-gray-300 hover:text-indigo-400 focus:outline-none"
-//             >
-//               <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-//                 {isOpen ? (
-//                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-//                 ) : (
-//                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-//                 )}
-//               </svg>
-//             </button>
-//           </div>
-//         </div>
-//       </div>
-
-//       {/* Mobile Menu */}
-//       {isOpen && (
-//         <div className="md:hidden bg-gray-800 px-4 pt-2 pb-4 space-y-2 shadow-md">
-//           <a href="#projects" className="block text-gray-300 hover:text-indigo-400 transition">
-//             Projects
-//           </a>
-//           <a href="#certifications" className="block text-gray-300 hover:text-indigo-400 transition">
-//             Certifications
-//           </a>
-//           <a href="#contact" className="block text-gray-300 hover:text-indigo-400 transition">
-//             Contact
-//           </a>
-//         </div>
-//       )}
-//     </nav>
-//   );
-// }
-
-
 "use client";
 
 import { useState, useEffect } from "react";
@@ -73,7 +7,6 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
-  // Handle scroll effect
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
@@ -82,12 +15,10 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Close mobile menu when clicking on a link
   const handleLinkClick = () => {
     setIsOpen(false);
   };
 
-  // Close mobile menu when clicking outside
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (isOpen && !event.target.closest("nav")) {
@@ -106,29 +37,29 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 ${
-      isScrolled 
-        ? "bg-gray-900/95 backdrop-blur-md shadow-lg border-b border-gray-800" 
-        : "bg-gray-900/90 backdrop-blur-sm"
-    }`}>
+    <nav
+      className={`fixed w-full z-50 transition-all duration-300 ${
+        isScrolled
+          ? "bg-gray-900/95 backdrop-blur-md shadow-lg border-b border-gray-800"
+          : "bg-gray-900/90 backdrop-blur-sm"
+      }`}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 sm:h-20">
-          
           {/* Logo */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             className="flex items-center"
           >
-            <a 
-              href="#home" 
+            <a
+              href="#home"
               className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent hover:scale-105 transition-transform duration-300"
             >
               Parth Sharma
             </a>
           </motion.div>
 
-          {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-6 lg:space-x-8">
             {navItems.map((item, index) => (
               <motion.a
@@ -146,7 +77,6 @@ export default function Navbar() {
             ))}
           </div>
 
-          {/* Mobile Hamburger */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
@@ -161,15 +91,21 @@ export default function Navbar() {
               aria-label="Toggle menu"
             >
               <div className="w-6 h-6 relative">
-                <span className={`absolute left-0 top-1/2 w-6 h-0.5 bg-current transform transition-all duration-300 ${
-                  isOpen ? 'rotate-45 -translate-y-1/2' : '-translate-y-2'
-                }`}></span>
-                <span className={`absolute left-0 top-1/2 w-6 h-0.5 bg-current transform transition-all duration-300 ${
-                  isOpen ? 'opacity-0' : 'opacity-100'
-                }`}></span>
-                <span className={`absolute left-0 top-1/2 w-6 h-0.5 bg-current transform transition-all duration-300 ${
-                  isOpen ? '-rotate-45 -translate-y-1/2' : 'translate-y-2'
-                }`}></span>
+                <span
+                  className={`absolute left-0 top-1/2 w-6 h-0.5 bg-current transform transition-all duration-300 ${
+                    isOpen ? "rotate-45 -translate-y-1/2" : "-translate-y-2"
+                  }`}
+                ></span>
+                <span
+                  className={`absolute left-0 top-1/2 w-6 h-0.5 bg-current transform transition-all duration-300 ${
+                    isOpen ? "opacity-0" : "opacity-100"
+                  }`}
+                ></span>
+                <span
+                  className={`absolute left-0 top-1/2 w-6 h-0.5 bg-current transform transition-all duration-300 ${
+                    isOpen ? "-rotate-45 -translate-y-1/2" : "translate-y-2"
+                  }`}
+                ></span>
               </div>
             </button>
           </motion.div>
@@ -180,68 +116,88 @@ export default function Navbar() {
       <AnimatePresence>
         {isOpen && (
           <>
-            {/* Backdrop */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="fixed inset-0 bg-black/50 backdrop-blur-sm md:hidden z-40"
+              className="z-40"
               onClick={() => setIsOpen(false)}
             />
-            
-            {/* Menu */}
+
             <motion.div
               initial={{ opacity: 0, x: "100%" }}
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: "100%" }}
               transition={{ type: "spring", damping: 25, stiffness: 200 }}
-              className="fixed top-0 right-0 h-full w-64 bg-gray-900/95 backdrop-blur-md border-l border-gray-800 shadow-2xl md:hidden z-50"
+              className="fixed top-0 right-0 h-full w-full bg-gray-900/95 backdrop-blur-md shadow-2xl md:hidden z-50"
             >
               <div className="flex flex-col h-full pt-20 pb-8 px-6">
-                
-                {/* Close Button */}
                 <button
                   onClick={() => setIsOpen(false)}
-                  className="absolute top-6 right-6 text-gray-400 hover:text-cyan-400 transition-colors duration-300 p-2"
+                  className="absolute top-6 right-6 text-gray-300 hover:text-cyan-400 transition-colors duration-300 p-2"
                   aria-label="Close menu"
                 >
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  <svg
+                    className="w-8 h-8"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M6 18L18 6M6 6l12 12"
+                    />
                   </svg>
                 </button>
 
-                {/* Navigation Links */}
-                <div className="space-y-6">
+                <div className="space-y-2 sm:space-y-4 px-2 sm:px-4">
                   {navItems.map((item, index) => (
-                    <motion.a
+                    <motion.div
                       key={item.name}
-                      href={item.href}
-                      initial={{ opacity: 0, x: 20 }}
+                      initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: index * 0.1 }}
-                      onClick={handleLinkClick}
-                      className="block text-lg text-gray-300 hover:text-cyan-400 transition-all duration-300 font-medium py-3 border-b border-gray-800 hover:border-cyan-400/30"
+                      className="w-full"
                     >
-                      {item.name}
-                    </motion.a>
+                      <motion.a
+                        href={item.href}
+                        onClick={handleLinkClick}
+                        className="flex items-center
+          justify-center
+          text-base sm:text-lg md:text-xl
+          font-medium
+          text-gray-100 hover:text-white
+          transition-all duration-300
+          py-3 sm:py-4
+          px-4
+          rounded-xl
+          bg-gray-800/40 hover:bg-gray-800/70
+          border border-gray-700/50 hover:border-cyan-500/30
+          shadow-sm hover:shadow-md
+          w-full
+          max-w-full
+          group
+          relative
+          overflow-hidden"
+                        whileHover={{ scale: 1.02 }}
+                        whileTap={{ scale: 0.98 }}
+                      >
+                        {/* Background effect on hover */}
+                        <span className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+
+                        {/* Text with icon indicator */}
+                        <span className="relative z-10 flex items-center gap-2 sm:gap-3">
+                          <span className="text-cyan-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            →
+                          </span>
+                          <span className="truncate">{item.name}</span>
+                        </span>
+                      </motion.a>
+                    </motion.div>
                   ))}
                 </div>
-
-                {/* Social/Contact Info in Mobile Menu */}
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: 0.5 }}
-                  className="mt-auto pt-8 border-t border-gray-800"
-                >
-                  <p className="text-gray-400 text-sm mb-4">Get in touch:</p>
-                  <a
-                    href="mailto:parth.scse@gmail.com"
-                    className="text-cyan-400 text-sm hover:underline"
-                  >
-                    parth.scse@gmail.com
-                  </a>
-                </motion.div>
               </div>
             </motion.div>
           </>

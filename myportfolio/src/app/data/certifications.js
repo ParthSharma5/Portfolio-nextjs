@@ -56,50 +56,7 @@ const certifications = [
     skills: ["C++", "DSA", "Algorithms", "Problem Solving"],
     featured: true,
   },
-  {
-    id: 6,
-    title: "React Developer",
-    issuer: "Codecademy",
-    year: "2025",
-    link: "",
-    status: "Upcoming",
-    duration: "3 months",
-    skills: ["React", "Hooks", "Context API", "Component Lifecycle"],
-    featured: false,
-  },
-  {
-    id: 7,
-    title: "Frontend Developer",
-    issuer: "Coursera",
-    year: "2024",
-    link: "",
-    status: "Upcoming",
-    duration: "6 months",
-    skills: ["HTML5", "CSS3", "JavaScript", "Responsive Design"],
-    featured: false,
-  },
-  // {
-  //   id: 8,
-  //   title: "Full Stack Development",
-  //   issuer: "Udemy",
-  //   year: "2024",
-  //   link: "https://drive.google.com/file/d/your-file-id/view?usp=sharing",
-  //   status: "Live",
-  //   duration: "8 months",
-  //   skills: ["MERN Stack", "REST APIs", "Authentication", "Deployment"],
-  //   featured: true
-  // },
-  // {
-  //   id: 9,
-  //   title: "Cloud Computing Fundamentals",
-  //   issuer: "Google Cloud",
-  //   year: "2024",
-  //   link: "https://drive.google.com/file/d/your-file-id/view?usp=sharing",
-  //   status: "Live",
-  //   duration: "2 months",
-  //   skills: ["Cloud Computing", "GCP", "Storage", "Networking"],
-  //   featured: false
-  // }
+ 
 ];
 
 export default certifications;

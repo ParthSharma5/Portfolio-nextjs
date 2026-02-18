@@ -2,10 +2,10 @@ import Head from "next/head";
 
 export default function SEO({
   title = "Parth Sharma | Frontend Developer",
-  description = "Portfolio of Parth Sharma, a frontend developer skilled in React, Next.js, and UI design.",
+  description = "Portfolio of Parth Sharma, a Frontend Developer skilled in React,React Native, Next.js, and UI design.",
   keywords = "Parth Sharma, Frontend Developer, React, Next.js, Portfolio",
   url = "https://yourdomain.com",
-  image = "https://yourdomain.com/og-image.png",
+  image = "https://lh3.googleusercontent.com/ogw/AF2bZygpQheUWLSJH1CNyY9jEoDS9KyqlinssD6OCsdSIHG8mw=s32-c-mo",
 }) {
   return (
     <Head>

@@ -1,4 +1,4 @@
-'use client'; // ✅ MUST be at top
+'use client';
 
 import { useState } from "react";
 import Navbar from "./Navbar";

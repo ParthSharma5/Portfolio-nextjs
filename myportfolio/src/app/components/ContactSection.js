@@ -78,7 +78,7 @@ export default function ContactSection() {
 
       if (response.ok) {
         setSubmitted(true);
-        e.target.reset(); // Clear form
+        e.target.reset(); 
       } else {
         alert("Form submission failed. Please try again.");
       }
@@ -252,7 +252,7 @@ export default function ContactSection() {
                       <input
                         type="text"
                         name="name"
-                        placeholder="John Doe"
+                        placeholder="Your name"
                         required
                         className="w-full px-4 py-3 rounded-xl bg-gray-700/50 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all duration-300"
                       />
@@ -268,7 +268,7 @@ export default function ContactSection() {
                       <input
                         type="email"
                         name="email"
-                        placeholder="john@example.com"
+                        placeholder="yourmail@example.com"
                         required
                         className="w-full px-4 py-3 rounded-xl bg-gray-700/50 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all duration-300"
                       />

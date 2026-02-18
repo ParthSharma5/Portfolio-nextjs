@@ -14,7 +14,7 @@ const Certification = ({ filter }) => {
         );
 
   return (
-    <section className="min-h-screen bg-gradient-to-br from-gray-900 to-gray-800 py-8 sm:py-12 lg:py-16 px-4 sm:px-6 lg:px-8">
+    <section className="min-h-screen  from-gray-900 to-gray-800 py-8 sm:py-12 lg:py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <motion.div
