@@ -5,7 +5,7 @@ const projects = [
     description:
       "Add your favorite book to our community recommendations by simply entering the book title, giving it a rating out of 5, and uploading or pasting an image of the book cover. You can also include a short note about why this book means so much to you.",
     link: "",
-    github: "https://github.com/yourusername/books-store", // Add your GitHub link
+    github: "https://github.com/ParthSharma5/Bookstore-Frontend",
     languagesUsed: ["React Native", "MongoDB", "Express", "Node.js"],
     status: "Not Live",
     featured: true,
@@ -20,7 +20,7 @@ const projects = [
       "TinDog is a playful dating app for dogs helping your pup meet new furry friends nearby. With simple usability, flexible subscription plans, and a money-back guarantee, it's the perfect way for your dog to find their true love.",
     status: "Live",
     link: "https://tindog-website-six-navy.vercel.app/",
-    github: "https://github.com/yourusername/tindog", // Add your GitHub link
+    github: "https://github.com/ParthSharma5/tindog-website",
     languagesUsed: ["JavaScript", "HTML", "CSS"],
     featured: false,
     date: "2024",
@@ -88,7 +88,8 @@ const projects = [
   {
     id: 7,
     title: "QuickMd",
-    description:'A markdwown editor built using React, allowing users to write and preview markdown content in real-time. The app features a split-screen interface with a textarea for input and a live preview pane that renders the formatted markdown, making it an ideal tool for writers, developers, and anyone who needs to create markdown content efficiently.',
+    description:
+      "A markdwown editor built using React, allowing users to write and preview markdown content in real-time. The app features a split-screen interface with a textarea for input and a live preview pane that renders the formatted markdown, making it an ideal tool for writers, developers, and anyone who needs to create markdown content efficiently.",
     status: "Upcoming",
     link: "",
     github: "",
@@ -97,9 +98,7 @@ const projects = [
     date: "2026",
     duration: "1 month",
     team: "Solo",
-
-  }
-
+  },
 ];
 
 export default projects;
