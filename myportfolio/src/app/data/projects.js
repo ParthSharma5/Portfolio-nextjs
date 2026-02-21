@@ -56,8 +56,11 @@ const projects = [
     duration: "1 month",
     team: "Solo",
   },
+];
+
+export const mobileProjects = [
   {
-    id: 5,
+    id: 1,
     title: "Books Store",
     description:
       "Add your favorite book to our community recommendations by simply entering the book title, giving it a rating out of 5, and uploading or pasting an image of the book cover. You can also include a short note about why this book means so much to you.",
@@ -72,7 +75,7 @@ const projects = [
   },
 
   {
-    id: 6,
+    id: 2,
     title: "WhatsApp Clone",
     description:
       "This project is a fully functional WhatsApp clone developed using React Native, designed to replicate the core features of the popular messaging app including real-time messaging, user authentication, and chat rooms.",
@@ -87,7 +90,7 @@ const projects = [
   },
 
   {
-    id: 7,
+    id: 3,
     title: "Real-time Chat App",
     description:
       "A full-featured real-time chat application built using React Native, Supabase, and Clerk for authentication. This project focuses on creating a fast, secure, and scalable mobile chat experience with modern backend services.",
