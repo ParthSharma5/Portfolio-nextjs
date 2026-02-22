@@ -56,6 +56,21 @@ const projects = [
     duration: "1 month",
     team: "Solo",
   },
+  {
+    id: 5,
+    title: "Blog Platform",
+    description:
+      "A modern blog platform built with Next.js that demonstrates the use of SSG and SSR rendering strategies.",
+    status: "Live",
+    link: "https://blog-platform-ten-woad.vercel.app/",
+    github: "https://github.com/ParthSharma5/Blog-Platform",
+    languagesUsed: ["Nextjs","ssr","ssg","tailwindcss","vercel"],
+    featured: true,
+    date: "2026",
+    duration: "1 month",
+    team: "Solo",
+  },
+  
 ];
 
 export const mobileProjects = [
