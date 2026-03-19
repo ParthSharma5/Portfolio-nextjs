@@ -1,5 +1,3 @@
-
-
 // "use client";
 
 // import Image from "next/image";
@@ -210,7 +208,6 @@
 //   );
 // }
 
-
 "use client";
 
 import Image from "next/image";
@@ -327,14 +324,23 @@ export default function HeroSection() {
                 />
               </svg>
             </a>
-            <button
+            <a
+              href="/Parth_Sharma_Resume_Frontend.pdf"
+              download="Parth_Sharma_Resume_Frontend.pdf"
+              className="inline-flex items-center justify-center border-2 dark:border-gray-700 border-gray-300 dark:text-gray-300 text-gray-700 px-7 py-3.5 rounded-lg font-semibold dark:hover:bg-gray-800 hover:bg-gray-100 dark:hover:text-white hover:text-gray-900 dark:hover:border-gray-600 hover:border-gray-400 transition-all duration-300 transform hover:scale-105 active:scale-95 text-base sm:text-lg w-full sm:w-auto text-center gap-3 focus:outline-none focus:ring-3 focus:ring-gray-600 focus:ring-offset-2 dark:focus:ring-offset-gray-900 focus:ring-offset-white"
+              aria-label="Download Resume"
+            >
+              <FiDownload className="text-lg" />
+              Download Resume
+            </a>
+            {/* <button
               onClick={() => alert("Resume download will be available soon!")}
               className="inline-flex items-center justify-center border-2 dark:border-gray-700 border-gray-300 dark:text-gray-300 text-gray-700 px-7 py-3.5 rounded-lg font-semibold dark:hover:bg-gray-800 hover:bg-gray-100 dark:hover:text-white hover:text-gray-900 dark:hover:border-gray-600 hover:border-gray-400 transition-all duration-300 transform hover:scale-105 active:scale-95 text-base sm:text-lg w-full sm:w-auto text-center gap-3 focus:outline-none focus:ring-3 focus:ring-gray-600 focus:ring-offset-2 dark:focus:ring-offset-gray-900 focus:ring-offset-white"
               aria-label="Download Resume"
             >
               <FiDownload className="text-lg" />
               Download Resume
-            </button>
+            </button> */}
           </motion.div>
 
           {/* Social links */}
